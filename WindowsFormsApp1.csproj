@@ -107,12 +107,6 @@
     <Compile Include="Buy_product.Designer.cs">
       <DependentUpon>Buy_product.cs</DependentUpon>
     </Compile>
-    <Compile Include="CrystalReport1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="delete_account.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,10 +191,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Buy_product.resx">
       <DependentUpon>Buy_product.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport1.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="delete_account.resx">
       <DependentUpon>delete_account.cs</DependentUpon>

@@ -59,7 +59,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Enter password more then 4 word.");
             }
         }
-        private bool validateUserCredentials(string username, string adhaar_card, string pancard)
+        private bool validateUserCredentials(string username, int adhaar_card, string pancard)
         {
             string query = "SELECT * FROM REGISTRATION WHERE username = '" + textBox1.Text + "' AND adhaar_no = '" + textBox2.Text + "' AND pancard = '" + textBox3.Text + "'";
             SqlCommand cmd = new SqlCommand(query, cnn);

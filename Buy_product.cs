@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class Buy_product : Form
     {
+
         double total;
         int count = 0;
         SqlConnection cnn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Ary patel\Downloads\New folder\Database1.mdf"";Integrated Security=True");
@@ -194,8 +195,8 @@ namespace WindowsFormsApp1
             //-------------------------------------------------
 
             // for add total amount of product
-            double total = Convert.ToDouble(s_amo) + Convert.ToDouble(c_amo) + Convert.ToDouble(i_amo) + Convert.ToInt32(amo);
-            double finalamount = amo + s_amo + c_amo + i_amo;
+            //double total = Convert.ToDouble(s_amo) + Convert.ToDouble(c_amo) + Convert.ToDouble(i_amo) + Convert.ToInt32(amo);
+            //double finalamount = amo + s_amo + c_amo + i_amo;
             
             // add item into list view
             ListViewItem list = new ListViewItem(textBox8.Text);
@@ -210,8 +211,8 @@ namespace WindowsFormsApp1
             list.SubItems.Add(textBox5.Text.ToString());
             list.SubItems.Add(textBox6.Text.ToString());
             list.SubItems.Add(textBox9.Text.ToString());
-            list.SubItems.Add(amo.ToString());
-            list.SubItems.Add(finalamount.ToString());
+            //list.SubItems.Add(amo.ToString());
+            //list.SubItems.Add(finalamount.ToString());
 
             listView1.Items.Add(list);
             //----------------------------------------------------------
