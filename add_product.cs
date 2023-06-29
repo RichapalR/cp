@@ -49,6 +49,16 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.png;)| *.jpg; *.jpeg; *.png;";
+            if(open.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = Image.FromFile(open.FileName);
+            }
+        }
+
         private void add_iteams_Load(object sender, EventArgs e)
         {
             con.Open();
@@ -106,7 +116,6 @@ namespace WindowsFormsApp1
                     textBox5.Text = "";
                     textBox6.Text = "";
                     comboBox1.SelectedIndex = 0;
-                    //pictureBox1.Image = null;
 
                     ID();
                 }
@@ -126,7 +135,6 @@ namespace WindowsFormsApp1
             textBox5.Text = "";
             textBox6.Text = "";
             comboBox1.SelectedIndex = 0;
-            //pictureBox1.Image = null;
         }
     }
 }

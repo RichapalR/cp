@@ -43,6 +43,4 @@ use [C:\USERS\ARY PATEL\DOWNLOADS\NEW FOLDER\DATABASE1.MDF] IF EXISTS(SELECT * F
 /* add product insert query */
 INSERT INTO ADD_PRODUCT(id, brand, product_name, product_Price, stock, retail_price, weight_, weight_size, product_picture) VALUES(1, "gg", "gfh", 100, 00, 120, 100, "gm", "C:\Users\Ary patel\Pictures\ary\mummy's photos\ary\IMG_3230")
 
-insert into account(name, amount, remark) values(@name, @amount, @remark);
 
-select * from supplier_bill

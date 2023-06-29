@@ -20,6 +20,7 @@ namespace WindowsFormsApp1
         public Buy_product()
         {
             InitializeComponent();
+//            comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
         }
 
         public void ID()
@@ -193,10 +194,6 @@ namespace WindowsFormsApp1
             //-------------------------------------------------
 
             // for add total amount of product
-            double amo = (Convert.ToDouble(textBox1.Text) * Convert.ToDouble(textBox2.Text)) - Convert.ToDouble(textBox3.Text);
-            double s_amo = (Convert.ToDouble(amo) * Convert.ToDouble(textBox4.Text)) / 100;
-            double c_amo = (Convert.ToDouble(amo) * Convert.ToDouble(textBox5.Text)) / 100;
-            double i_amo = (Convert.ToDouble(amo) * Convert.ToDouble(textBox9.Text)) / 100;
             double total = Convert.ToDouble(s_amo) + Convert.ToDouble(c_amo) + Convert.ToDouble(i_amo) + Convert.ToInt32(amo);
             double finalamount = amo + s_amo + c_amo + i_amo;
             
@@ -224,30 +221,12 @@ namespace WindowsFormsApp1
             comboBox4.Text = "";
             comboBox5.Text = "";
             textBox1.Text = "";
-            textBox2.Text = "00";
-            textBox3.Text = "00";
-            textBox4.Text = "00";
-            textBox5.Text = "00";
-            textBox6.Text = "00";
-            textBox9.Text = "00";
-            //----------------------------------------------------------------
-            //label amount of (amount, gst amount, total amount)
-            double sum = 0;
-            double famount = 0;
-            for(int i = 0; i < listView1.Items.Count; i++)
-            {
-                sum += double.Parse(listView1.Items[i].SubItems[12].Text);
-                famount += double.Parse(listView1.Items[i].SubItems[13].Text);
-            }
-            label14.Text = sum.ToString();
-            label16.Text = famount.ToString();
-            double gst = Convert.ToDouble(label16.Text) - Convert.ToDouble(label14.Text);
-            label15.Text = gst.ToString();
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             product_name();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -283,28 +262,13 @@ namespace WindowsFormsApp1
                 catch
                 {
 
-                }
+        }
             }
             MessageBox.Show("Bill Added");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            foreach(ListViewItem eachitem in listView1.SelectedItems)
-            {
-                listView1.Items.Remove(eachitem);
-            }
-            double sum = 0;
-            double famount = 0;
-            for (int i = 0; i < listView1.Items.Count; i++)
-            {
-                sum += double.Parse(listView1.Items[i].SubItems[12].Text);
-                famount += double.Parse(listView1.Items[i].SubItems[13].Text);
-            }
-            label14.Text = sum.ToString();
-            label16.Text = famount.ToString();
-            double gst = Convert.ToDouble(label16.Text) - Convert.ToDouble(label14.Text);
-            label15.Text = gst.ToString();
         }
     }
 }
